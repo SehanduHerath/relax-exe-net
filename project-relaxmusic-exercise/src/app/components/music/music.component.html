@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Breathing Exercise</title>
+    <link rel="stylesheet" href="music.component.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    
+</head>
+<body>
+    <div class="image-container">
+        <img src="assets/Images/pic.jpg" alt="GIF above audio player" width="400" height="480">
+      </div>
+      
+      <div class="audio-player">
+        <div class="audio-controls">
+          <button (click)="onPrevClick()"><i class="fas fa-step-backward"></i></button>
+          <button (click)="onPlayPauseClick()"><i class="fas fa-play" *ngIf="playPauseLabel === 'Play'"></i><i class="fas fa-pause" *ngIf="playPauseLabel === 'Pause'"></i></button>
+          <button (click)="onNextClick()"><i class="fas fa-step-forward"></i></button>
+          
+          <div class="time" #currentTime>0:00</div>
+        </div>
+        <div class="progress-bar" #progressBar (click)="onProgressBarClick($event)">
+          <div class="progress" #progress></div>
+        </div>
+        <div class="time" #totalTime>0:00</div>
+        <audio #audio (timeupdate)="onTimeUpdate()" (loadedmetadata)="onLoadedMetadata()"></audio>
+      </div>
+      
+</body>
+</html>

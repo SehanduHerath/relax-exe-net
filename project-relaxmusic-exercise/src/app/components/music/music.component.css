@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Center the content */
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 105vh;
+    background-color: #000000;
+  }
+  
+  /* Styling the image container */
+  .image-container {
+    width: 40%; /* Fixed width for the image */
+    height: auto; /* Height will scale automatically */
+   margin-left: 14%;
+    align-items: center;
+    
+  }
+
+  
+
+  
+  /* Styling the audio player container */
+  .audio-player {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 600px;
+    background-color: #232020;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  /* Styling the audio controls */
+  .audio-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  button {
+    
+    background: none;
+    border: none;
+    color: #6dc0d4;
+    margin-right: 10px;
+    cursor: pointer;
+    
+  }
+  
+  
+  button:focus {
+    outline: none;
+  }
+  
+  /* Styling the progress bar */
+  .progress-bar {
+    flex-grow: 1;
+    height: 10px;
+    background: #70c6d6;
+    margin: 0 10px;
+    border-radius: 5px;
+    position: relative;
+  }
+  .time{
+    color: #8f138f;
+  }
+  
+  .progress {
+    width: 0;
+    height: 100%;
+    background: #8f138f;
+    border-radius: 5px;
+  }button {
+    background: none;
+    border: none;
+
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
